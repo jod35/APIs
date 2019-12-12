@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        function getAssync(theUrl,callback){
+            var XMLHttp= new XMLHttpRequest();
+            XMLHttp.onreadystatechange=function(){
+                if (XMLHttp.readyState == 4 && XMLHttp.status ==200) {
+                callback(XMLHttp.responseText);
+                 }
+            XMLHttp.open("GET",theUrl,true);
+            XMLHttp.send(null);
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <div class="myElee">
+        Hello WOrld!
+    </div>
+</body>
+</html>
