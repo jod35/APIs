@@ -12,10 +12,12 @@ class Item(Resource):
             if item['name'] == name:
                 return item
 
+        return {"item":None},404
+
     def post(self,name):
         item={'name':name,'price':12.00}
         items.append(items)
-        return item
+        return item,201
 
 api.add_resource(Item,'/item/<string:name>')
 
