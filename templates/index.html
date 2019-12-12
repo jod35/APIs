@@ -1,24 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <script type="text/javascript">
-        function getAssync(theUrl,callback){
-            var XMLHttp= new XMLHttpRequest();
-            XMLHttp.onreadystatechange=function(){
-                if (XMLHttp.readyState == 4 && XMLHttp.status ==200) {
-                callback(XMLHttp.responseText);
-                 }
-            XMLHttp.open("GET",theUrl,true);
-            XMLHttp.send(null);
-            }
-        }
-
-
-    </script>
+<script type="text/javascript">
+	function httpGetAsync(theUrl, callback) {
+	    var xmlHttp = new XMLHttpRequest();
+	    xmlHttp.onreadystatechange = function() {
+	        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+	            callback(xmlHttp.responseText);
+	    }
+	    xmlHttp.open("GET", theUrl, true); // true for asynchronous
+	    xmlHttp.send(null);
+	}
+</script>
 </head>
 <body>
-    <div class="myElee">
-        Hello WOrld!
-    </div>
+
+<div id="myElement">
+	Hello, world!
+</div>
+
 </body>
 </html>
