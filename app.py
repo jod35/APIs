@@ -2,6 +2,17 @@ from flask import Flask
 
 app=Flask(__name__)
 
+stores=[
+    {
+        'name':"My wonderful store",
+        'items':[
+            {
+                "name":"My item",
+                 "price":15.77
+            }
+        ]
+    }
+]
 app.debug=True
 app.secret_key='verysecret'
 
