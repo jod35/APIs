@@ -1,14 +1,14 @@
 from flask import Flask
-from flask_restful import Resource,Api
+from flask_restful import Api ,Resource
 
 app=Flask(__name__)
 api=Api(app)
 
-class Student(Resource):
-    def get(self,name):
-        return {'student':name}
+class Sister(Resource):
+    def get(self,name,age):
+        return {"name":name,"age":age}
 
 
-api.add_resource(Student,'/student/<string:name>')
+api.add_resource(Sister,'/sister/<string:name>/<int:age>')
 
 app.run(debug=True)
